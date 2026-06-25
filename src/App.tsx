@@ -533,8 +533,6 @@ To ask open-ended questions, write code, or have general conversations (like Cha
         files={files}
         chatMode={currentMode}
         onChatModeChange={handleChatModeChange}
-        apiKey={apiKey}
-        isApiKeyValid={isApiKeyValid}
         onSendMessage={handleSendMessage}
         isLoading={isLoadingAnswer}
         onSelectCitation={setActiveCitation}

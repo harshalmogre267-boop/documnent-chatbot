@@ -1418,12 +1418,7 @@ body {
   flex-shrink: 0;
 }
 
-/* Warnings modification */
-.input-warning-banner.general-warn {
-  background: rgba(0, 240, 255, 0.05);
-  border-color: rgba(0, 240, 255, 0.15);
-  color: var(--accent);
-}
+
 
 /* Custom Session File Toggle */
 .file-session-checkbox {

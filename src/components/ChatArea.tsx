@@ -31,8 +31,6 @@ interface ChatAreaProps {
   files: DocumentFile[];
   chatMode: 'documents' | 'general';
   onChatModeChange: (mode: 'documents' | 'general') => void;
-  apiKey: string;
-  isApiKeyValid: boolean;
   onSendMessage: (text: string) => void;
   isLoading: React.ReactNode | boolean; // supports boolean or custom indicator
   onSelectCitation: (citation: Citation) => void;
@@ -44,8 +42,6 @@ export const ChatArea: React.FC<ChatAreaProps> = ({
   files,
   chatMode,
   onChatModeChange,
-  apiKey,
-  isApiKeyValid,
   onSendMessage,
   isLoading,
   onSelectCitation,
@@ -467,11 +463,7 @@ export const ChatArea: React.FC<ChatAreaProps> = ({
             <span>⚠️ Please upload a document or load the demo file to start querying in Document mode.</span>
           </div>
         )}
-        {chatMode === 'general' && (!apiKey || !isApiKeyValid) && (
-          <div className="input-warning-banner general-warn">
-            <span>💡 Note: Open-ended chat requires a valid Gemini API Key. Configure it in the sidebar.</span>
-          </div>
-        )}
+
         
         <div className="input-row">
           <textarea
